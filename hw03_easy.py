@@ -7,8 +7,15 @@ __author__ = 'Корнейчук Александр Николаевич'
 # Округление должно происходить по математическим правилам (0.6 --> 1, 0.4 --> 0).
 # Для решения задачи не используйте встроенные функции и функции из модуля math.
 
+
 def my_round(number, ndigits):
-    pass
+    a = int('1' + '0'*ndigits)
+    b = number*a
+    c = int(b)
+    i = int((b-c)*10)
+    if i >= 5:
+        c += 1
+    return c/a
 
 
 print(my_round(2.1234567, 5))
@@ -21,7 +28,7 @@ print(my_round(2.9999967, 5))
 # Решение реализовать в виде функции.
 # Билет считается счастливым, если сумма его первых и последних цифр равны.
 # !!!P.S.: функция не должна НИЧЕГО print'ить
-
+'''
 def lucky_ticket(ticket_number):
     if sum(map(int, str(ticket_number)[:3])) == sum(map(int, str(ticket_number)[3:])):
         return 'Счастливый'
@@ -31,3 +38,4 @@ def lucky_ticket(ticket_number):
 print(lucky_ticket(123006))
 print(lucky_ticket(12321))
 print(lucky_ticket(436751))
+'''
