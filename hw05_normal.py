@@ -14,7 +14,7 @@ while answer != '0':
     answer = input('Выбрать: ')
     print(answer)
     if answer == '1':
-        dir_name = input ('наберите полный путь папки: ')
+        dir_name = input('наберите полный путь папки: ')
         hw05_easy.change_dir(dir_name)
     elif answer == '2':
         dir_name = os.getcwd()
