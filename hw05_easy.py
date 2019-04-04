@@ -39,10 +39,15 @@ for i in path_dir:
 # Напишите скрипт, отображающий папки текущей директории.
 
 
-list = os.listdir()
+def list_dir(main_path):
+    for _ in os.listdir(main_path):
+        print(_)
 
-for i in list:
-    print(i)
+
+main_path = os.getcwd()
+
+
+list_dir(main_path)
 
 
 # Задача-3:
@@ -55,4 +60,14 @@ def copy_file(first_file, backup_file):
 
 first_file = sys.argv[0]
 backup_file = first_file + '.backup'
-copy_file(first_file,backup_file)
+copy_file(first_file, backup_file)
+
+# Функция для normal
+
+
+def change_dir(path_dir):
+    try:
+        os.chdir(path_dir)
+        print(os.getcwd() + ' - текущая директория')
+    except:
+        print(path_dir + ' - такой директории нет')
