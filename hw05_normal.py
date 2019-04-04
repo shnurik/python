@@ -4,28 +4,28 @@ __author__ = 'Корнейчук Александр Николаевич'
 import os
 import hw05_easy
 
-exitos = 'a'
-while exitos != '0':
-    print('Перейти в папку - выбрать 1')
-    print('Просмотреть содержимое текущей папки - выбрать 2')
-    print('Удалить папку - выбрать 3')
-    print('Создать папку - выбрать 4')
-    print('для выхода - выбрать 0')
-    exitos = input('Выбрать: ' )
-    print(exitos)
-    if exitos == '1':
+answer = 'a'
+while answer != '0':
+    print('Перейти в папку - [1]')
+    print('Просмотреть содержимое текущей папки - [2]')
+    print('Удалить папку - [3]')
+    print('Создать папку - [4]')
+    print('для выхода - [0]')
+    answer = input('Выбрать: ')
+    print(answer)
+    if answer == '1':
         dir_name = input ('наберите полный путь папки: ')
         hw05_easy.change_dir(dir_name)
-    elif exitos == '2':
+    elif answer == '2':
         dir_name = os.getcwd()
         hw05_easy.list_dir(dir_name)
-    elif exitos == '3':
+    elif answer == '3':
         dir_name = input('наберите полный путь папки: ')
         hw05_easy.delete_dir(dir_name)
-    elif exitos == '4':
+    elif answer == '4':
         dir_name = input('наберите полный путь папки: ')
         hw05_easy.make_dir(dir_name)
-    elif exitos == '0':
+    elif answer == '0':
         pass
     else:
         print('Такого пункта меню нет')
