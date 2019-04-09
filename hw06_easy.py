@@ -42,6 +42,6 @@ class Triangle():
 my_tri = Triangle(2, 2, 5, 8, 7, 4)
 
 print('Длинна строны АВ = {}, ВС = {}, СА = {}'.format(my_tri.AB, my_tri.BC, my_tri.CA))
-print('Периметр треугольника АВС равен {}'.format(my_tri.perimeter()))
+print(f'Периметр треугольника АВС равен {my_tri.perimeter()}')
 print('Площадь треугольника АВС равна {}'.format(my_tri.square()))
 print('Высота треугольника АВС, проведенная из угла В равна {}'.format(my_tri.height()))
