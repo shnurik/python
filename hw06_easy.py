@@ -33,15 +33,19 @@ class Triangle():
         self.height = round((self.square / self.CA), 2)
         return(self.height)
 
+
+my_tri = Triangle(2, 2, 5, 8, 7, 4)
+
+print('Длинна стороны АВ = {}, ВС = {}, СА = {}'.format(my_tri.AB, my_tri.BC, my_tri.CA))
+print(f'Периметр треугольника АВС равен {my_tri.perimeter()}')
+print('Площадь треугольника АВС равна {}'.format(my_tri.square()))
+print('Высота треугольника АВС, проведенная из угла В равна {}'.format(my_tri.height()))
+
+
 # Задача-2: Написать Класс "Равнобочная трапеция", заданной координатами 4-х точек.
 # Предусмотреть в классе методы:
 # проверка, является ли фигура равнобочной трапецией;
 # вычисления: длины сторон, периметр, площадь.
 
 
-my_tri = Triangle(2, 2, 5, 8, 7, 4)
 
-print('Длинна строны АВ = {}, ВС = {}, СА = {}'.format(my_tri.AB, my_tri.BC, my_tri.CA))
-print(f'Периметр треугольника АВС равен {my_tri.perimeter()}')
-print('Площадь треугольника АВС равна {}'.format(my_tri.square()))
-print('Высота треугольника АВС, проведенная из угла В равна {}'.format(my_tri.height()))
